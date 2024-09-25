@@ -1,0 +1,47 @@
+.Feedback {
+    @apply
+        flex gap-4
+        justify-between
+        items-center
+        bg-main-white
+        py-[80px] px-56
+        md:justify-center;
+
+    &-right {
+        @apply md:hidden;
+    }
+
+    &-left {
+        @apply w-[465px];
+        &>p {
+            @apply text-main-gray font-light mt-4 mb-6;
+        }
+
+        &-form {
+            @apply flex flex-col gap-4;
+
+            &>input {
+                @apply 
+                    text-main-gray 
+                    focus:text-main-gray
+                    bg-background
+                    rounded-[16px]
+                    p-4
+                    w-full
+                    outline-none;
+            }
+
+            & > .wrapper {
+                @apply 
+                    flex w-full gap-6 
+                    justify-between items-center
+                    mt-10
+                    sm:flex-wrap
+                    sm:justify-center
+                    text-center;
+
+            }
+        }
+
+    }
+}

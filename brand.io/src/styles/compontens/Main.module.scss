@@ -1,0 +1,318 @@
+@import '../variables.scss';
+
+.Main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 140px 0;
+
+  section {width: 100%;}
+
+  .head {
+    width: 644px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    text-align: center;
+    h2 {margin-bottom:30px;}
+  }
+
+  .Partners {
+    display: flex;
+    align-items: center;
+    gap: 0 80px;
+    padding: 0 $offsetX-900;
+    background-color: $c_light700;
+    height: 200px;
+
+    img {
+      object-fit: cover;
+      height: 23px;
+    }
+  }
+
+  .Customers {
+    h2 {
+      width: 664px;
+      height: 96px;
+      text-align: center;
+      margin: auto;
+    }
+    
+    .container {
+      display: flex;
+      gap: 0 100px;
+      justify-content: center;
+      margin-top: 80px;
+    }
+
+    .card {
+      width: 270px;
+      height: 270px;
+
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 70px;
+        height: 74px;
+      }
+
+      .text {
+        margin-top: 40px;
+
+        h5 {
+          width: 160px;
+          height: 50px;
+          margin: auto;
+          text-align: center;
+          margin-bottom: 16px;  
+        }
+
+        p {
+          width: 270px;
+          min-height: 90px;
+          margin: auto;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .ReviewsOfClients {
+
+    .slider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: relative;
+      width: 1220px;
+      max-width: 1220px;
+      height: 540px;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 1020px;
+        max-width: 1020px;
+        height: 540px;
+        background-color: $c_light700;
+        z-index: -1;
+      }
+
+      .swipeContainer {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0 40px;
+
+        .card {
+          width: 380px;
+          height: 282px;
+          padding: 40px 32px 26px 24px;
+          background-color: $c_light900;
+
+          .stars {
+            svg {
+              width: 18.36px;
+              height: 17.22px;
+              fill: $c_active800;
+            }
+          }
+
+          p {
+            width: 320px;
+            min-height: 120px;
+            margin-top: 18.78px;
+            margin-bottom: 24px;
+          }
+
+          .postScriptum {
+            span {
+              font-size: 10px;
+              font-weight: 400;
+              line-height: 10px;
+            }
+          }
+        }
+      }
+
+      .swipeController {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        height: 66px;
+        margin: 0 auto;
+        margin-top: 31px;
+        background-color: $c_light900;
+        
+        button {
+          width: 50px;
+          height: 50px;
+          border:none;
+          background: none;
+          cursor: pointer;
+          transform: rotate(180deg);
+
+          svg * {fill:$c_active700}
+          &.active {
+            svg * {fill:$c_light900}
+            background-color: $c_dark900;
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+  }
+
+  .HowItWorks {
+    .head {
+      width: 594px;
+      margin-bottom: 90px;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      
+      &:not(:last-child) {
+        margin-bottom: 110px;
+      }
+
+      &:nth-child(odd) {
+        flex-direction: row-reverse;
+      }
+
+      .rightSide {
+        max-width: 358px;
+        margin-right: 95px;
+        h2 {margin-bottom: 18px;}
+      }
+    }
+  }
+
+  .AboutUs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .leftSide {
+      width: min(466px, 100%);
+      max-width: 466px;
+      h2 {text-transform: uppercase;}
+      p {margin: 30px 0;}
+
+      & > .container {
+        display: flex;
+        gap: 0 20px;
+      
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          height: 58px;
+          width: 180px;
+          border: none;
+          outline: none;
+
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 27px;
+
+          color: $c_active900;
+          background-color: $c_light800;
+          border: 1px solid $c_active900;
+          cursor: pointer;
+
+          &.active {
+            color: $c_light800;
+            background-color: $c_active900;
+            box-shadow: $boxShadow-900;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    .rightSide {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 30px 40px;
+
+      padding-left: 80px;
+      border-left: 1px solid $c_dark600;
+
+      .card {
+        width: 192px;
+        height: 161px;
+        display: flex;
+        gap: 10px 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $c_light800;
+        border: 1px solid $c_dark600;
+
+        p {
+          width: 90px;
+          text-align: center;
+        }
+
+        &.active {
+          border:none;
+          background-color: $c_light900;
+          box-shadow: $boxShadow-800;
+        }
+      }
+    }
+  }
+
+  .CTA {
+    width: 100vw;
+    padding-top: 80px;
+    padding-bottom: 180px;
+    background-color: $c_light700;
+    
+    form {
+      display: flex;
+      width: 491px;
+      height: 80px;
+      margin: auto;
+
+      button {
+        color: $c_light800;
+        background-color: $c_active900;
+        width: 161px;
+        height: 100%;
+        border:none;
+        outline: none;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+      }
+
+      input {
+        flex: 1;
+        height: 100%;
+        border:none;
+        outline: none;
+        background-color: $c_light900;
+        padding-left: 28px;
+
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+
+        &::placeholder {
+          color: $c_dark700;
+        }
+      }
+    }
+  }
+}

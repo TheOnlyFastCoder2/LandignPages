@@ -1,0 +1,55 @@
+@tailwind base;
+@layer base {
+    .Tarrifs {
+        @apply 
+            py-[80px] px-56  
+            bg-main-white;
+            &>h2 {@apply mb-[41px]}
+
+        .wrapper {
+            @apply 
+                flex
+                gap-[24px]
+                lg:flex-wrap
+                lg:justify-center
+                lg:items-center;
+        }
+
+        .Tarrif {
+            @apply 
+                w-[290px]
+                px-[24px] py-[20px]
+                rounded-[24px]
+                flex-grow
+                bg-[#f9f9f9];
+            
+            /* box-shadow: 0px 4px 20px 0px rgba(25, 25, 25, 0.05); */
+            /* backdrop-filter: blur(24px); */
+
+            &_headline {
+                h3:first-child {
+                    @apply text-main-black mb-[8px];
+                }
+                h3:last-child {
+                    @apply text-main-gray;
+                    span {@apply text-blue}
+                }
+            }
+
+            &-services {
+                @apply 
+                    flex flex-col 
+                    gap-4 mt-[44px] mb-4;
+
+                &_item {
+                    @apply flex gap-4 text-main-gray;
+
+                    i {
+                        @apply size-[24px];
+                    }
+                }
+            }
+        }
+
+    }
+}

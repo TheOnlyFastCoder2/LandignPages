@@ -1,0 +1,76 @@
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: $c_light800;
+}
+
+#root {
+  width: 1440px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  & > .container {
+    width: 1170px;
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}
+
+h1 {
+  font-size: 94px;
+  font-weight: 700;
+  line-height: 94px;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  color: $c_dark900;
+}
+
+h3 {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 39px;
+  letter-spacing: -0.01em;
+  color: $c_dark900;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: -0.01em;
+  color: $c_dark900;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0em;
+  color: $c_dark900;
+}
+
+h6 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  color: $c_dark900;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  color: $c_dark800;
+}

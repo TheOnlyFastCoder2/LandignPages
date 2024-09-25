@@ -1,0 +1,12 @@
+.Footer {
+    @apply 
+        flex 
+        bg-blue
+        items-center 
+        justify-between
+        text-main-white
+        h-[120px] p-56
+        md:flex-wrap
+        md:gap-4;
+    
+}

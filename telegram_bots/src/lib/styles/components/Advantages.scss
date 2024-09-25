@@ -1,0 +1,44 @@
+@tailwind base;
+
+@layer base {
+    .Advantages {
+        @apply 
+            w-full
+            py-[80px]
+            min-h-[480px] 
+            bg-main-white;
+
+        &_head {
+            @apply px-56;
+        }
+        & > .wrapper {
+            @apply 
+                flex gap-4 
+                mt-10 px-[24px]
+                md:flex-col
+                md:items-center;
+        }
+
+        &-item {
+            @apply 
+                flex flex-col 
+                w-fit
+                px-[24px]
+                bg-main-white/50
+                md:w-[min(100%,500px)];
+
+            h3 {
+                @apply 
+                    text-center 
+                    content-center 
+                    h-20
+                    bg-main-white
+                    text-main-black;
+            }
+
+            p {
+                @apply text-main-gray text-justify;
+            }
+        }
+    }
+}

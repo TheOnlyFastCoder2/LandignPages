@@ -1,0 +1,57 @@
+@tailwind base;
+
+@layer base {
+    .EmailConfirmer {
+        @apply 
+            flex items-center 
+            justify-between
+            gap-x-[20px] 
+            min-h-[720px] p-56
+            md:flex-col
+            md:items-center
+            md:justify-center;
+
+        &-left {
+            @apply w-[min(100%,465px)] flex flex-col;
+
+            &-form {
+
+                @apply 
+                    flex 
+                    justify-between
+                    items-center 
+                    h-[64px]
+                    pr-[8px]
+                    mt-[40px]
+                    mb-[16px]
+                    rounded-[16px] 
+                    bg-main-white/50
+                    overflow-hidden;
+
+                &_input {
+                    @apply 
+                        text-main-gray 
+                        focus:text-main-gray
+                        bg-transparent
+                        px-4
+                        w-full
+                        h-full
+                        outline-none; 
+                }
+                
+                &_button {
+                    @apply 
+                        text-blue
+                        px-[24px]
+                        py-[12px]
+                        rounded-[16px] 
+                        bg-main-white; 
+                }
+            }
+        }
+    
+        &-right > img {
+            @apply w-[628px] md:w-[100%];
+        }
+    }
+}

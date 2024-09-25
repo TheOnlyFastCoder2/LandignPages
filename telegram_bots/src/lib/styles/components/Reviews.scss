@@ -1,0 +1,45 @@
+@tailwind base;
+
+@layer base {
+    .Reviews {
+        @apply
+            py-[80px] px-56;
+            &>h2 {@apply mb-[41px]}
+
+        &.background-decor::before {
+            background-image:url("/imgs/background_3.png");
+        }
+
+        & > .wrapper {
+                @apply 
+                    grid grid-cols-2 gap-6
+                    md:grid-cols-[repeat(auto-fill,minmax(min(628px,100%),1fr))];
+        }
+
+        .User {
+            @apply  bg-main-white/50;
+            &-topBar {
+                @apply  
+                    flex 
+                    justify-between 
+                    items-center
+                    bg-main-white
+                    h-[96px] p-4;
+
+                & > .wrapper {@apply flex gap-4 items-center;}
+                &_avatar {@apply size-16 rounded-[50%];}
+                &_date {@apply text-main-gray}
+            }
+
+            & > .wrapper {
+                @apply flex flex-col gap-4 px-6 py-4;
+            }
+            &-scores {
+                @apply flex gap-1;
+                svg:not(.true) path {
+                    @apply fill-background;
+                }
+            }
+        }
+    }
+}

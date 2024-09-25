@@ -1,0 +1,115 @@
+@import '../variables.scss';
+
+.Header {
+  width: 100%;
+  & > .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+
+    .leftSide {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 569px;
+      min-width: 569px;
+      padding-top: 220px;
+
+      h1 {
+        color: $c_dark900;
+        span {color: $c_active900;}
+      }
+
+      & > .container {
+        display: flex;
+        gap: 0 20px;
+      
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          height: 58px;
+          width: 180px;
+          border: none;
+          outline: none;
+
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 27px;
+
+          color: $c_active900;
+          background-color: $c_light800;
+          cursor: pointer;
+
+          &.active {
+            color: $c_light800;
+            background-color: $c_active900;
+            box-shadow: $boxShadow-900;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    .rightSide {
+      img {
+        position: relative;
+        right: -43px;
+      }
+    }
+  }
+}
+
+.NavBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 58px;
+  margin-top: 40px; 
+
+  .menu {
+    display: flex;
+    gap: 0 50px;
+    list-style-type: none;
+    // margin-left: 102px;
+
+    li {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+      color: $c_dark900;
+      text-transform: capitalize;
+      cursor: pointer;
+    }
+  }
+
+  .boxVarify {
+    display: flex;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 16px 42px;
+      font-size: 18px;
+      font-weight: 400;
+      color: $c_dark900;
+      background: none;
+
+      border:none;
+      outline: none;
+      cursor: pointer;
+      
+      &.active {
+        color: $c_light900;
+        box-shadow: $boxShadow-900;
+        background-color: $c_active900;
+      }
+    }
+  }
+}

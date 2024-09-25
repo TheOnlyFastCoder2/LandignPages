@@ -1,0 +1,128 @@
+@tailwind base;
+
+@layer base {
+    .Nav {
+        @apply 
+            flex 
+            justify-between 
+            items-center  
+            min-h-[80px]
+            gap-4
+            p-56
+            bg-main-white
+            md:px-[20px];
+
+        &-triggerMobile {
+            @apply 
+                border-0
+                cursor-pointer
+                rounded-[50%]
+                min-lg:hidden
+                md:block
+                z-20;
+        }
+
+        & > .wrapper {
+            @apply 
+                flex 
+                items-center 
+                gap-[16px];
+
+            &._2 {
+                @apply 
+                    justify-between 
+                    flex-grow
+                    px-[16px]
+                    bg-main-white;
+            }
+        }
+        
+        &-list {
+            @apply
+                flex
+                gap-[24px]
+                mx-auto;
+            
+            li a {
+                @apply
+                    flex
+                    justify-center
+                    relative
+                    text-main-gray
+                    capitalize
+                    text-nowrap
+                    cursor-pointer;
+
+                &:hover::before {
+                    @apply opacity-25;
+                }
+
+                
+                &::before {
+                    content: "";
+                    transition: 0.2s ease opacity;
+                    @apply 
+                        block
+                        absolute
+                        bottom-[-5px]
+                        w-5/12
+                        h-[2px]
+                        bg-main-black
+                        opacity-0;
+                }
+            }
+            
+            & > .headlineMobile {
+                @apply  min-lg:hidden sm:block;
+            } 
+        }
+        &-translater span {
+            @apply 
+                md:text-[36px] 
+                text-main-gray;
+
+           &.Nav-translater_eng {
+            @apply 
+                cursor-pointer
+                [&.active]:text-blue
+                [&.Ru]:hover:text-blue
+                [&.En]:hover:text-blue;
+        }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .wrapper._2 { 
+            &._2 {
+                @apply
+                    hidden
+                    fixed
+                    left-0
+                    top-0
+                    py-[80px] px-[56px]
+                    flex-col
+                    justify-between
+                    items-center
+                    w-full
+                    h-screen
+                    bg-main-white
+                    z-10
+                    [&.active]:flex;
+            }
+        }
+
+        .Nav-list {
+            @apply
+                flex-col
+                gap-[16px]
+                m-0;
+            
+            li a {
+                @apply
+                    text-[clamp(24px,6vw,56px)]
+                    text-main-black;
+            }
+        }
+    }
+    
+}
